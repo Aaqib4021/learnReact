@@ -1,0 +1,72 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: 2px solid beige;
+    box-shadow: 0 0 11px;
+    font-size: 1rem;
+}
+.logo{
+    max-width: 100px ;
+}
+.navItems > ul{
+    display:flex;
+    gap: 2rem;
+    list-style-type: none;
+    position: relative;
+    right: 4rem;
+    top: 0.6rem;
+}
+.navItems li{
+    padding: 10px;
+    border-radius: 20px;
+    background-color: green;
+    color: white;
+}
+.navItems li:hover{
+    background-color: blue;
+}
+.search{
+    margin-left: 40%;
+    margin-bottom: 2rem;
+}
+.search-input{
+    padding : 15px 100px;
+    border: none;
+    box-shadow: 0 0 5px;
+    border-radius: 20px;
+    text-align: center;
+}
+.search-button{
+    margin-left: 1rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgb(146, 146, 146);
+    color: white;
+    border-radius: 1rem;
+}
+.restaurant-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+.rescard{
+    max-width: 300px;   
+    border-radius: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 0 0 5px;
+}
+.res-image{
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+}
