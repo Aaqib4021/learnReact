@@ -1,7 +1,6 @@
 # Learning React
 
-# parcel
-
+@parcel
 - dev builds
 - local server
 - HMR = hot module replacement
@@ -22,26 +21,29 @@
 
 - React.createElement -->Object -->which is converted into the HTML Element with the help of render we do to render it on the page or we can say when we render it on the page until then it is an object..
 
-# JSX
+- JSX
 
-# babel
+- babel
 
-# React components -->class & functional
+- React components -->class & functional
 
-# functional -->start with Capital letter then ()={...}
+- functional -->start with Capital letter then ()={...}
 
-# To render functional component use <nameofthecomponent />
+- To render functional component use <nameofthecomponent />
 
-# Component composition --> Component inside another component.
+- Component composition --> Component inside another component.
 
-# component using function keyword
+- component using function keyword
 
-# Props-> properties
+- Props-> properties
 
-# config driven ui
+- config driven ui
 
-# map --> no need to write the same component many times use map
+- map --> no need to write the same component many times use map
 
 - pass key with each item of the map
-- do not use index as keys as is not recomended by the react devs(unique id is best if u have).but if unique key is not available then use index it is better to have something than nothing
+- do not use index as keys as is not recomended by the react devs(unique id is best if u have).but if unique key is not available then use index it is better to have something than nothing..
+- two types of export/import --> default and named exports/imports (default for only one and named for multiple)
 
+- Hooks -->hooks are utitlity functions which gives us lot more power(mainly used are useState and useEffect) 
+- useState --> whenever a state variable changes/updates react re renders the component (it keeps the ui sync with the data.)
