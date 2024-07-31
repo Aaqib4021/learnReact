@@ -12,7 +12,7 @@ const ResCard = (props) => {
               src={CDN_URL + cloudinaryImageId}
               />
               <h3>{name}</h3>
-              <h4>{cuisines}</h4>
+              <h4>{cuisines.join(",")}</h4>
               <h4>&#9733; {avgRating}</h4>
               <h4>{deliveryTime} mins</h4>
           </div>

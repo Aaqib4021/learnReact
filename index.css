@@ -44,6 +44,7 @@ body{
     box-shadow: 0 0 5px;
     border-radius: 20px;
     text-align: center;
+    font-weight: 600;
 }
 .search-button{
     margin-left: 1rem;
@@ -59,6 +60,7 @@ body{
     gap: 3rem;
 }
 .rescard{
+    word-break: break-all;
     max-width: 300px;   
     border-radius: 20px;
     margin-left: 10px;

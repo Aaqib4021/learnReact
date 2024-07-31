@@ -47,3 +47,17 @@
 
 - Hooks -->hooks are utitlity functions which gives us lot more power(mainly used are useState and useEffect) 
 - useState --> whenever a state variable changes/updates react re renders the component (it keeps the ui sync with the data.)
+- useEffect() -->another imp hook which takes two arguments (callback function,[dependency array])-->the callback funciton here will be called once the component is rendered and then the code inside the callback function will be executed..
+- fecthing actual data from swiggy api instead of using dummy data and then passing it to the useState hook 
+- optional channing(?)
+- reconcilation algo(react fibre)
+- virtual dom 
+- actual dom 
+- diff algo
+- Monolith and microservice arch.
+- Shimmer effect.
+- conditional redering.
+- why we even need useState()
+- how it works 
+- how it is better than the normal variable..
+- what powers does it have which makes it this powerfull.
