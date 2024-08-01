@@ -1,8 +1,12 @@
 import React from "react";
-import ReactDOM from 'react-dom/client';
+import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
-
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import About from "./Components/About";
+import Contact from "./Components/Contact";
+import Error from "./Components/Error";
+import RestaurantMenu from "./Components/RestaurantMenu";
 
 // const heading =  React.createElement("h1",{},"this is an h1 from react!");
 // console.log(heading);
@@ -18,23 +22,22 @@ import Body from "./Components/Body";
 //     return <h1>this is an h1 from functional component! </h1>;//?same as below..
 // }
 
-// const HeadingComponent = () => (//?this is now a functional component 
+// const HeadingComponent = () => (//?this is now a functional component
 //     <h1>this is an h1 from functional component! </h1>
 // );
 
 // console.log(HeadingComponent);
 
-//?the aove code can be written inside the function not in arrow function 
+//?the aove code can be written inside the function not in arrow function
 
 // const HeadingComponent = function (){
 //     return  <h1>this is an h1 from functional component! </h1>
 // }
-//?component compostion 
+//?component compostion
 //component inside another component
 // const Title = ()=>(
 //     <p>Hey this is my Title</p>
 // )
-
 
 // const HeadingComponent = ()=>(
 //     <div>
@@ -45,9 +48,7 @@ import Body from "./Components/Body";
 //     </div>
 // );
 
-
-
-//!what if element inside component 
+//!what if element inside component
 
 // const title = <p>This is title</p>
 
@@ -58,44 +59,74 @@ import Body from "./Components/Body";
 //     </div>
 // );
 
-
-
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 
-// root.render(<HeadingComponent/>);   
-// //?this won't work because react is inside the node modules so we have to import that from there.. 
-
+// root.render(<HeadingComponent/>);
+// //?this won't work because react is inside the node modules so we have to import that from there..
 
 //!SECTION -->:APP CREATION:
 
 //SECTION - Now going to write our first app which is a food ordering app..
 
-//components in the app 
+//components in the app
 /**
  * header
  *  - logo
- *  - nav items 
+ *  - nav items
  *  - cart
  * body
  *  - restaurant container
- *  - restaurantCard -img name rating 
+ *  - restaurantCard -img name rating
  * footer
  *  - copywrite
- *  - links 
- *  - addresses 
+ *  - links
+ *  - addresses
  *  - contact
  */
- 
-//* Main Component 
-const AppLayout = ()=>{
-    return(
-        <div className="app">
-            <Header/>
-            <Body/>
-        </div>
-    )  
-}
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+//* Main Component
+const AppLayout = () => {
+  return (
+    <div className="app">
+      <Header />
+      <Outlet />
+    </div>
+  );
+};
+const appRouter = createBrowserRouter([
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      {
+        path: "/",
+        element: <Body />,
+      },
+      {
+        path: "/about",
+        element: <About />,
+      },
+      {
+        path: "/contact",
+        element: <Contact />,
+      },
+      {
+        path:"/restaurant/:resId",
+        element:<RestaurantMenu/>
+      }
+    ],
+    errorElement: <Error />,
+  },
+  // {
+  //   path: "/about",
+  //   element: <About />
+  // },
+  // {
+  //   path: "/contact",
+  //   element: <Contact />
+  // },
+]);
 
-root.render(<AppLayout/>);   
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
+root.render(<RouterProvider router = {appRouter} />);

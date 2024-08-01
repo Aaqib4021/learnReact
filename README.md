@@ -61,3 +61,21 @@
 - how it works 
 - how it is better than the normal variable..
 - what powers does it have which makes it this powerfull.
+- more on useEffect hook 
+- how many times it will be called with no dependency array ,with empty dep array ,with something in the array..
+- more about hooks 
+- routing 
+- react router
+- routing configuration (creating)
+- createRouterBrowser([takes as a list ])
+- RouterProvider--> pass this in the root rendering and then use router ={configuration}
+- error page if page not present.
+- create own error page 
+- use react-router-dom hook given for error so that you can get more info about the error in an object..
+- userouteError() --> gives us object which has that info about the error  
+- outlet component ;
+- Link
+- single page application
+- two types of routing in web apps --> Client side routing. || Server side routing.
+-  Dynamic routing
+- useParams();
