@@ -78,3 +78,6 @@ body{
     padding-block: 5px;
     cursor: pointer;
 }
+.user-card{
+    border: 2px solid red;
+}

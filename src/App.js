@@ -111,9 +111,9 @@ const appRouter = createBrowserRouter([
         element: <Contact />,
       },
       {
-        path:"/restaurant/:resId",
-        element:<RestaurantMenu/>
-      }
+        path: "/restaurant/:resId",
+        element: <RestaurantMenu />,
+      },
     ],
     errorElement: <Error />,
   },
@@ -129,4 +129,4 @@ const appRouter = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router = {appRouter} />);
+root.render(<RouterProvider router={appRouter} />);

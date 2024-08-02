@@ -1,6 +1,7 @@
 # Learning React
 
 @parcel
+
 - dev builds
 - local server
 - HMR = hot module replacement
@@ -45,37 +46,57 @@
 - do not use index as keys as is not recomended by the react devs(unique id is best if u have).but if unique key is not available then use index it is better to have something than nothing..
 - two types of export/import --> default and named exports/imports (default for only one and named for multiple)
 
-- Hooks -->hooks are utitlity functions which gives us lot more power(mainly used are useState and useEffect) 
+- Hooks -->hooks are utitlity functions which gives us lot more power(mainly used are useState and useEffect)
 - useState --> whenever a state variable changes/updates react re renders the component (it keeps the ui sync with the data.)
 - useEffect() -->another imp hook which takes two arguments (callback function,[dependency array])-->the callback funciton here will be called once the component is rendered and then the code inside the callback function will be executed..
-- fecthing actual data from swiggy api instead of using dummy data and then passing it to the useState hook 
+- fecthing actual data from swiggy api instead of using dummy data and then passing it to the useState hook
 - optional channing(?)
 - reconcilation algo(react fibre)
-- virtual dom 
-- actual dom 
+- virtual dom
+- actual dom
 - diff algo
 - Monolith and microservice arch.
 - Shimmer effect.
 - conditional redering.
 - why we even need useState()
-- how it works 
+- how it works
 - how it is better than the normal variable..
 - what powers does it have which makes it this powerfull.
-- more on useEffect hook 
+- more on useEffect hook
 - how many times it will be called with no dependency array ,with empty dep array ,with something in the array..
-- more about hooks 
-- routing 
+- more about hooks
+- routing
 - react router
 - routing configuration (creating)
 - createRouterBrowser([takes as a list ])
 - RouterProvider--> pass this in the root rendering and then use router ={configuration}
 - error page if page not present.
-- create own error page 
+- create own error page
 - use react-router-dom hook given for error so that you can get more info about the error in an object..
-- userouteError() --> gives us object which has that info about the error  
+- userouteError() --> gives us object which has that info about the error
 - outlet component ;
 - Link
 - single page application
 - two types of routing in web apps --> Client side routing. || Server side routing.
--  Dynamic routing
+- Dynamic routing
 - useParams();
+
+# class based components
+
+- render method in class components (pass your jsx here in this method so that it gets displayed in the page as functional components).
+- React.Component (React from "react");
+
+- super keyword
+- recieving the props in the class component
+- creating state variables in the class component.
+- updating the state variables in class components.
+- componentDidMount() --> it will be invoked once the component is loaded.
+- phases of mouting -> render phase || commit phase.(refer diagram)
+- batching in rendering phase and then batching in commit phase.
+- fetching data in componentDidMount().
+- mouting || updating || unmouting
+- componentDidUpdate()
+- componentWillMount()
+- componentWillUnmount()
+- unmounting in useEffect -->return ()=>{}  --> will be called while unmounting the component.
+ 
