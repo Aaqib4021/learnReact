@@ -94,9 +94,18 @@
 - phases of mouting -> render phase || commit phase.(refer diagram)
 - batching in rendering phase and then batching in commit phase.
 - fetching data in componentDidMount().
-- mouting || updating || unmouting
+- mouting || updating || unmouting.
 - componentDidUpdate()
 - componentWillMount()
 - componentWillUnmount()
-- unmounting in useEffect -->return ()=>{}  --> will be called while unmounting the component.
- 
+- unmounting in useEffect -->return ()=>{} --> will be called while unmounting the component.
+
+# optimization of our app
+
+- single responsibility principle
+- custom hooks-->why we need them how to create custom hooks .
+- Bundling
+- chunking || code splitting || dynamic bundling || lazy loading.
+- bundling in the project using another component grocery
+- lazy form react
+- Suspense from react

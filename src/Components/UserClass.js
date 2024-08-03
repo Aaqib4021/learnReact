@@ -22,14 +22,14 @@ class UserClass extends React.Component {
     // console.log(this.props.name+"child componentDidMount");
     const data = await fetch("https://api.github.com/users/akshaymarch7");
     const jsonData = await data.json();
-    console.log(jsonData);
+    // console.log(jsonData);
 
     this.setState({
       userInfo : jsonData,
     });
   }
   componentWillUnmount(){
-    console.log("hey unmounted.");
+    // console.log("hey unmounted.");
   }
   render() {
     const { name, location,avatar_url    } = this.state.userInfo;
@@ -75,7 +75,7 @@ class UserClass extends React.Component {
     );
   }
   componentDidUpdate(){
-    console.log("lastly called");
+    // console.log("lastly called");
   }
 }
 export default UserClass;
