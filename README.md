@@ -109,3 +109,16 @@
 - bundling in the project using another component grocery
 - lazy form react
 - Suspense from react
+
+# Styling the app
+
+- Libraries and frameworks (material UI && Bootstrap && Chakra UI && Ant design && Tailwind css ).
+- normal css file.
+- sass || scss.
+- learn Tailwind (tailwing intelsense and tailwind documentation)=extensions
+
+# higher order components
+
+- creating
+- why we need it
+- when we need it
