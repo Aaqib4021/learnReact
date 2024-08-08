@@ -122,3 +122,10 @@
 - creating
 - why we need it
 - when we need it
+
+# controlled and uncontrolled component
+
+- lifting the state up.
+- createContext()--> from react || useContext().
+- Both in functional and class based components.
+- 

@@ -19,9 +19,9 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body ">
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-4 ">
         <input
-          className="rounded-lg px-8 py-3 "
+          className="rounded-lg px-8 py-3 focus:bg-gray-200 "
           type="text"
           placeholder="Search"
           value={inputValue.toLowerCase()}

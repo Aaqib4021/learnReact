@@ -1,11 +1,12 @@
+import { CDN_URL } from "../utils/constants";
 const RestaurantMenuitems = (props) => {
   const { item } = props;
   //   console.log(item);
   return (
     <div>
       <div>
-        {item.map((currentItem) => (
-          <div className=" my-4 border-b-2 text-left border-black cursor-pointer">
+        {item.map((currentItem,index) => (
+          <div key={index} className=" my-4 border-b-2 text-left border-black cursor-pointer">
             <div className=" text-lg flex flex-col ">
               <span className="font-semibold text-orange-950 ">
                 {currentItem.card.info.name}
@@ -21,10 +22,13 @@ const RestaurantMenuitems = (props) => {
                 {currentItem.card.info.description}
               </p>
               <img
-                className="max-w-40 rounded-lg mt-[-30px] mb-8 "
-                src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/${currentItem.card.info.imageId}`}
+                className="max-w-40 rounded-lg mt-[-30px]"
+                src={CDN_URL + currentItem.card.info.imageId}
               />
             </div>
+            <button className="text-green-900 py-1 px-4 rounded-xl shadow-lg border-2 border-white-900 relative left-[86%] top-[-20px]  mb-8 bg-white font-bold ">
+              ADD
+            </button>
           </div>
         ))}
       </div>

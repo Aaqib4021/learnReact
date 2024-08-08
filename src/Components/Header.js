@@ -1,8 +1,10 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import UserContext from "../utils/UserContext";
 
 const Header = () => {
+  const { userName } = useContext(UserContext);
   const [btnInside, setbtnInside] = useState("login");
   useEffect(() => {}, [btnInside]);
   return (
@@ -28,7 +30,7 @@ const Header = () => {
             Cart
           </li>
           <button
-            className="mr-8 bg-orange-700 p-2 rounded-xl text-white hover:bg-sky-700"
+            className="mr-2 bg-orange-700 p-2 rounded-xl text-white hover:bg-sky-700"
             onClick={() => {
               btnInside === "login"
                 ? setbtnInside("logout")
@@ -37,6 +39,7 @@ const Header = () => {
           >
             {btnInside}
           </button>
+          <li className="ml-[-30px] font-bold mt-2">User: {userName}</li>
         </ul>
       </div>
     </div>
