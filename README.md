@@ -130,4 +130,27 @@
 - Both in functional and class based components.
 - how to modify this context data if we need to.
 - how to modify the value of this context provider .
+
+# REDUX & RTK
+
+- what is redux
+- why we use redux
+- what is redux tool kit (rtk).
+- why it is better than redux core.
+- why was it created.
+- what is redux store.
+- what are slices inside the redux store.
+- how to write the data inside these slices.
+- dispatch || Action || Reducer(function)
+- how to read the data from these slices.
+- what is selector what is it used for.
+- subscribing to the store.
+- ... component is subscribed to the store.ie it is in sync with the
+- STEPS
+  - install @reduxjs/toolkit and react-redux.
+  - Build the store
+  - connect our store to our app
+  - create a slice(Cart slice)
+  - dispatch (Action)
+  - Selector.
 -

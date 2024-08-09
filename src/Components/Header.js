@@ -2,8 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { LOGO_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
+  const cartItems = useSelector((store) => store.cart.items);
+  // console.log(cartItems);
   const { LoggedUser } = useContext(UserContext);
   const [btnInside, setbtnInside] = useState("login");
   useEffect(() => {}, [btnInside]);
@@ -26,9 +29,11 @@ const Header = () => {
           <li className="bg-emerald-500 rounded-xl px-4 py-2 text-white hover:bg-indigo-600">
             <Link to="/grocery">Grocery</Link>
           </li>
+
           <li className="bg-emerald-500 rounded-xl px-4 py-2 text-white hover:bg-indigo-600">
-            Cart
+            <Link to="/cart"> Cart({cartItems.length}) </Link>
           </li>
+
           <button
             className="mr-2 bg-orange-700 p-2 rounded-xl text-white hover:bg-sky-700"
             onClick={() => {

@@ -8,6 +8,9 @@ import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
 import userContext from "./utils/UserContext";
+import { Provider } from "react-redux";
+import appStore from "./utils/appStore";
+import Cart from "./Components/Cart";
 // const heading =  React.createElement("h1",{},"this is an h1 from react!");
 // console.log(heading);
 
@@ -64,7 +67,7 @@ import userContext from "./utils/UserContext";
 // root.render(<HeadingComponent/>);
 // //?this won't work because react is inside the node modules so we have to import that from there..
 
-//!SECTION -->:APP CREATION:
+//!SECTION - ->:APP CREATION:
 
 //SECTION - Now going to write our first app which is a food ordering app..
 
@@ -89,14 +92,16 @@ const Grocery = lazy(() => import("./Components/Grocery"));
 const AppLayout = () => {
   const [userName, setuserName] = useState("Talib");
   return (
-    <userContext.Provider value={{ LoggedUser: userName, setuserName }}>
-      <div className="app">
-        <userContext.Provider value={{ LoggedUser: "yawar" }}>
-          <Header />
-        </userContext.Provider>
-        <Outlet />
-      </div>
-    </userContext.Provider>
+    <Provider store={appStore}>
+      <userContext.Provider value={{ LoggedUser: userName, setuserName }}>
+        <div className="app">
+          <userContext.Provider value={{ LoggedUser: "yawar" }}>
+            <Header />
+          </userContext.Provider>
+          <Outlet />
+        </div>
+      </userContext.Provider>
+    </Provider>
   );
 };
 
@@ -128,6 +133,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,

@@ -4,7 +4,11 @@ import { Link } from "react-router-dom";
 import useRestaurants from "../utils/useRestaurants";
 import { useContext } from "react";
 import userContext from "../utils/UserContext";
+
+
 const Body = () => {
+
+
   const [
     listOfRestarants,
     filteredRestaurant,

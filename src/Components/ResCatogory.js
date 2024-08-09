@@ -14,9 +14,7 @@ const ResCatogory = (props) => {
           className=" text-xl font-bold flex justify-between cursor-pointer"
           onClick={handleClick}
         >
-          <span>
-            {title}({data.itemCards.length})
-          </span>
+          <span>{title}</span>
           {showItems ? <button>🔼</button> : <button>🔽</button>}
         </div>
 

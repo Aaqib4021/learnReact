@@ -1,12 +1,24 @@
 import { CDN_URL } from "../utils/constants";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
+
 const RestaurantMenuitems = (props) => {
   const { item } = props;
-  //   console.log(item);
+  // console.log(item);
+  const dispatch = useDispatch();
+
+  const handleAddItem = (currentItem) => {
+    dispatch(addItem(currentItem));
+  };
+
   return (
     <div>
       <div>
-        {item.map((currentItem,index) => (
-          <div key={index} className=" my-4 border-b-2 text-left border-black cursor-pointer">
+        {item.map((currentItem, index) => (
+          <div
+            key={index}
+            className=" my-4 border-b-2 text-left border-black cursor-pointer"
+          >
             <div className=" text-lg flex flex-col ">
               <span className="font-semibold text-orange-950 ">
                 {currentItem.card.info.name}
@@ -26,7 +38,11 @@ const RestaurantMenuitems = (props) => {
                 src={CDN_URL + currentItem.card.info.imageId}
               />
             </div>
-            <button className="text-green-900 py-1 px-4 rounded-xl shadow-lg border-2 border-white-900 relative left-[86%] top-[-20px]  mb-8 bg-white font-bold ">
+
+            <button
+              className="text-green-900 py-1 px-4 rounded-xl shadow-lg border-2 border-white-900 relative left-[86%] top-[-20px]  mb-8 bg-white font-bold "
+              onClick={() => handleAddItem(currentItem)}
+            >
               ADD
             </button>
           </div>
