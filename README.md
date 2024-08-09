@@ -128,4 +128,6 @@
 - lifting the state up.
 - createContext()--> from react || useContext().
 - Both in functional and class based components.
-- 
+- how to modify this context data if we need to.
+- how to modify the value of this context provider .
+-

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
 
 const Header = () => {
-  const { userName } = useContext(UserContext);
+  const { LoggedUser } = useContext(UserContext);
   const [btnInside, setbtnInside] = useState("login");
   useEffect(() => {}, [btnInside]);
   return (
@@ -39,7 +39,7 @@ const Header = () => {
           >
             {btnInside}
           </button>
-          <li className="ml-[-30px] font-bold mt-2">User: {userName}</li>
+          <li className="ml-[-30px] font-bold mt-2">User: {LoggedUser}</li>
         </ul>
       </div>
     </div>

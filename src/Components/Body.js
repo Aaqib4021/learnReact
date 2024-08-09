@@ -2,7 +2,8 @@ import ResCard, { OpenRestaurant } from "./ResCard";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import useRestaurants from "../utils/useRestaurants";
-
+import { useContext } from "react";
+import userContext from "../utils/UserContext";
 const Body = () => {
   const [
     listOfRestarants,
@@ -12,8 +13,10 @@ const Body = () => {
     setInputValue,
   ] = useRestaurants();
 
-  console.log(listOfRestarants);
+  // console.log(listOfRestarants);
   const OpenRestaurantCard = OpenRestaurant(ResCard);
+  // console.log(userContext);
+  const { setuserName, LoggedUser } = useContext(userContext);
 
   return listOfRestarants.length === 0 ? (
     <Shimmer />
@@ -53,6 +56,18 @@ const Body = () => {
       >
         Top Rated
       </button>
+
+      <div>
+        <label>UserName:</label>
+        <input
+          type="text"
+          className="border border-black mb-4 p-2"
+          value={LoggedUser}
+          onChange={(e) => {
+            setuserName(e.target.value);
+          }}
+        />
+      </div>
 
       <div className=" flex flex-wrap justify-around gap-  mb-24 ">
         {filteredRestaurant.map((restaurant) => (

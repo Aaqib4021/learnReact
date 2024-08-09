@@ -14,11 +14,10 @@ class About extends Component {
       <div className="about">
         <h1>Hey welcome here</h1>
         <div>
-          LOGGED IN USER
           <userContext.Consumer>
             {(data) => {
-              return(<h1>{data.userName}</h1>
-            )}}
+              return <h1>LOGGED IN USER {data.LoggedUser}</h1>;
+            }}
           </userContext.Consumer>
         </div>
         <UserClass name={"first child"} />

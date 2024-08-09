@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./Components/Header";
 import Body from "./Components/Body";
@@ -7,7 +7,7 @@ import About from "./Components/About";
 import Contact from "./Components/Contact";
 import Error from "./Components/Error";
 import RestaurantMenu from "./Components/RestaurantMenu";
-
+import userContext from "./utils/UserContext";
 // const heading =  React.createElement("h1",{},"this is an h1 from react!");
 // console.log(heading);
 
@@ -87,13 +87,19 @@ import RestaurantMenu from "./Components/RestaurantMenu";
 const Grocery = lazy(() => import("./Components/Grocery"));
 //* Main Component
 const AppLayout = () => {
+  const [userName, setuserName] = useState("Talib");
   return (
-    <div className="app">
-      <Header />
-      <Outlet />
-    </div>
+    <userContext.Provider value={{ LoggedUser: userName, setuserName }}>
+      <div className="app">
+        <userContext.Provider value={{ LoggedUser: "yawar" }}>
+          <Header />
+        </userContext.Provider>
+        <Outlet />
+      </div>
+    </userContext.Provider>
   );
 };
+
 const appRouter = createBrowserRouter([
   {
     path: "/",
