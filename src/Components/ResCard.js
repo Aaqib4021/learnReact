@@ -24,7 +24,7 @@ const ResCard = (props) => {
     </div>
   );
 };
-
+ 
 export const OpenRestaurant = (ResCard) => {
   return (props) => {
     return (

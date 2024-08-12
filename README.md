@@ -153,4 +153,27 @@
   - create a slice(Cart slice)
   - dispatch (Action)
   - Selector.
--
+- configureStore()
+- <provider store={}>
+- createSlice() -->creating and exporting
+- useSelector()
+- useDispatch()
+- redux dev tools
+
+# Testing
+
+- Developer testing
+- Manual testing
+- Unit testing
+- Integration testing
+- End to End testing
+- Install libraries
+- install react testing library
+- install jest
+- install dependencies required for babel(using babel)
+- Add babel.config.js and write the code from website in that.
+- configure parcel config file(.parcelrc) to disable the default babel configuration (transpilation)
+- {\_\_(underscore|underscore)=dunder (dunder tests)}
+- write test case
+- toBe
+- toBeInTheDocument from "@testing-library/jest-dom
