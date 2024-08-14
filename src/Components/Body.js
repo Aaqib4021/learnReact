@@ -5,10 +5,7 @@ import useRestaurants from "../utils/useRestaurants";
 import { useContext } from "react";
 import userContext from "../utils/UserContext";
 
-
 const Body = () => {
-
-
   const [
     listOfRestarants,
     filteredRestaurant,
@@ -28,6 +25,7 @@ const Body = () => {
     <div className="body ">
       <div className="flex justify-center gap-4 ">
         <input
+          data-testid="searchInput"
           className="rounded-lg px-8 py-3 focus:bg-gray-200 "
           type="text"
           placeholder="Search"
@@ -72,8 +70,7 @@ const Body = () => {
           }}
         />
       </div>
-
-      <div className=" flex flex-wrap justify-around gap-  mb-24 ">
+      <div className=" flex flex-wrap justify-around mb-24 ">
         {filteredRestaurant.map((restaurant) => (
           <Link
             key={restaurant.info.id}

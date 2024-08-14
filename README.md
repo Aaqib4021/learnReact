@@ -177,3 +177,10 @@
 - write test case
 - toBe
 - toBeInTheDocument from "@testing-library/jest-dom
+- BrowserRouter
+- describe -->can hold as many test basically acts as a container of some tests (eg contact tests ) -<Provider>
+- beforeAll(callback fn()) && beforeEach(callback fn())
+- afterAll(callback fn()) && afterEach(callback fn())
+- FireEvent(click/...)
+- getByTestId();
+- 
